@@ -15,6 +15,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.entity.data.DataTracker;
 
 public class SillaDeRuedasMod implements ModInitializer {
     public static final String MOD_ID = "silladeruedas";
@@ -40,19 +41,12 @@ public class SillaDeRuedasMod implements ModInitializer {
             return ActionResult.SUCCESS;
         }
         
-        // Método corregido con nombre válido en inglés
         private boolean hasPassenger() { 
             return getFirstPassenger() != null; 
         }
         
         @Override 
-        protected void initDataTracker() {}
-        
-        @Override 
-        protected void readCustomDataFromNbt(net.minecraft.nbt.NbtCompound nbt) {}
-        
-        @Override 
-        protected void writeCustomDataToNbt(net.minecraft.nbt.NbtCompound nbt) {}
+        protected void initDataTracker(DataTracker.Builder builder) {}
         
         @Override 
         public boolean damage(ServerWorld world, DamageSource source, float amount) {
