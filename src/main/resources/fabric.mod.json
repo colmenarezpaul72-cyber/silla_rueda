@@ -1,0 +1,11 @@
+{
+ "schemaVersion": 1,
+ "id": "silladeruedas",
+ "version": "${version}",
+ "name": "Silla de ruedas",
+ "description": "Una silla de ruedas montable.",
+ "authors": ["Mod creado con ayuda de ChatGPT"],
+ "environment": "*",
+ "entrypoints": {"main": ["com.example.silladeruedas.SillaDeRuedasMod"]},
+ "depends": {"fabricloader": ">=0.16.0", "minecraft": "1.21.1", "java": ">=21", "fabric-api": "*"}
+}
