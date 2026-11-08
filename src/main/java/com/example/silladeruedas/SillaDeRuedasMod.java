@@ -16,6 +16,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.entity.data.DataTracker;
+import net.minecraft.nbt.NbtCompound;
 
 public class SillaDeRuedasMod implements ModInitializer {
     public static final String MOD_ID = "silladeruedas";
@@ -47,6 +48,12 @@ public class SillaDeRuedasMod implements ModInitializer {
         
         @Override 
         protected void initDataTracker(DataTracker.Builder builder) {}
+        
+        @Override 
+        protected void readCustomDataFromNbt(NbtCompound nbt) {}
+        
+        @Override 
+        protected void writeCustomDataToNbt(NbtCompound nbt) {}
         
         @Override 
         public boolean damage(ServerWorld world, DamageSource source, float amount) {
